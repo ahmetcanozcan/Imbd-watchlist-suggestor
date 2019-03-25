@@ -1,0 +1,176 @@
+/*
+  Color whell url : https://color.adobe.com/tr/Copy-of-MAchine-learning-with-Erik-option-2-color-theme-12084780/edit/?copy=true
+*/
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #2b3a42;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23374953' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23445863' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23516773' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%235e7682' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%236c8592' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%237d939d' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%238fa0a8' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+input:focus {
+  outline: none;
+}
+
+div.loading-anim {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(15, 38, 49, 0.801);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+div.loading-anim img {
+  width: 104px;
+  height: 104px;
+}
+
+div.container {
+  padding-top: 10vh;
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.input {
+  width: 60%;
+  display: flex;
+  margin-left: 20%;
+  box-shadow: 0px 5px 25px -5px black;
+  background-color: #FF9000;
+  border-radius: 12px;
+  transition: 300ms;
+}
+
+div.input.init {
+  margin-top: 30vh;
+}
+
+div.input * {
+  padding: 10px;
+  font-size: 110%;
+  border: 3px solid #FF9000;
+
+}
+
+
+div.input input {
+  flex: 5;
+  background-color: #F0F0DF;
+  border-right: none;
+  border-radius: 12px;
+
+}
+
+div.input button {
+  flex: 1;
+  background-color: transparent;
+  color: #3F5866;
+  cursor: pointer;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+div.movieCard {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10vh;
+  padding: .5rem;
+  background-color: #F0F0DF;
+  color: #2B3A42;
+  box-shadow: 1px 10px 35px 1px black;
+  animation: movie-car-init 1200ms forwards;
+}
+
+@keyframes movie-car-init {
+  from {
+    opacity: 0;
+    transform: translateY(155px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+div.movieCard .grid {
+  display: grid;
+  grid-template-columns: 158px auto;
+  grid-column-gap: 15px;
+  text-align: left;
+}
+
+div.movieCard .grid .image {
+  background-color: #FF9000;
+}
+
+div.movieCard .grid img {
+  width: 100%;
+  height: auto;
+}
+
+.again {
+  transition: 200ms;
+  display: inline-block;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: .1rem 1rem;
+}
+
+.again span {
+  display: inline-block;
+  font-size: 24px;
+  transform: translateY(-18px);
+}
+
+.again:hover {
+  box-shadow: 1px 10px 35px 0px black;
+}
+
+img.againButton {
+  width: 54px !important;
+  cursor: pointer;
+  padding: .4rem;
+  border: none;
+  display: inline-block;
+  text-align: right;
+  border-radius: 40%;
+  display: inline-block;
+  margin-left: auto;
+  width: auto;
+  color: white;
+  transition: 200ms;
+}
+
+.footer {
+  opacity: .6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: .2rem 1rem;
+  background-color: rgb(202, 132, 132);
+  text-align: left;
+  border-top-left-radius: 12px;
+}
+
+@media screen and (max-width:960px) {
+  div.container {
+    width: 100%;
+  }
+
+  div.input {
+    width: 100%;
+    margin-left: 0;
+  }
+}
